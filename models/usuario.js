@@ -37,3 +37,5 @@ Usuario.init({
 });
 
 module.exports = Usuario;
+
+//visto en clase
