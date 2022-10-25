@@ -1,0 +1,10 @@
+{
+    "development": {
+        "username":"root",
+        "password": "clownmaquinarias",
+        "database": "twitter",
+        "host": "localhost",
+        "dialect": "mysql",
+        "port": "3306"
+    }
+}
