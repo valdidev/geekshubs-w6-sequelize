@@ -4,7 +4,7 @@ const sequelize = require('../db/db');
 class Perfil extends Model {};
 
 Perfil.init({
-    usuario: {
+    nomUsuario: {
         type: DataTypes.STRING,
         primaryKey: true,
         allowNull: false,
@@ -16,13 +16,13 @@ Perfil.init({
     seguidos: DataTypes.INTEGER,
     seguidores: DataTypes.INTEGER,
     biografia: DataTypes.TEXT,
-    mail_user: {
+    /* mail_user: {
         type: DataTypes.STRING,
         validate: {
             isEmail: true,
             len: [10, 100]
         }
-    }
+    } */
 
 },
 {

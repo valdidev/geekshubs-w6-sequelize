@@ -7,9 +7,9 @@ const router = require('./router');
 
 const PORT = 3000;
 
-const Usuario = require('./models/usuario');
-const Perfil = require('./models/perfil');
-
+// const Usuario = require('./models/usuario');
+// const Perfil = require('./models/perfil');
+require('./models/associations');
 
 // MIDDLEWARES
 app.use(express.json());
@@ -107,6 +107,21 @@ router.delete('/deleteUser/:mail', async (req, res) => {
 //PUERTO
 app.listen(PORT, () => {
     console.log(`Escuchado por puerto ${PORT}...`);
+
+    // authentica no sobreescribe y es más ligero
+    db.authenticate().then(() => {
+        console.log("Conectados a la DB");
+    }).catch(error => {
+        console.log("Se ha producido un error: " + error);
+    })
+
+    // sobreescribe
+    /* db.sync().then(() => {
+        console.log("Conectados a la DB");
+    }).catch(error => {
+        console.log("Se ha producido un error: " + error);
+    }) */
+
 });
 
 

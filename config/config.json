@@ -1,7 +1,7 @@
 {
     "development": {
         "username":"root",
-        "password": "clownmaquinarias",
+        "password": "plim1903",
         "database": "twitter",
         "host": "localhost",
         "dialect": "mysql",
